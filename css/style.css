@@ -1,0 +1,129 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full height */
+}
+
+main {
+    flex: 1; /* Allows main content to grow and push footer to bottom */
+}
+
+header, footer {
+    background-color:green;
+    color: white;
+    width: 100%;
+}
+
+header {
+    height: 10vh;
+}
+
+footer {
+    color: white;
+    text-align: center;
+}
+
+.logo {
+    font-size: 50px;
+    font-style: New Amsterdam;
+    color: white;
+    position: absolute;
+}
+
+.Rhino {
+    display: none; 
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: right; /* Center align items horizontally */
+    width: 100%;
+    
+}
+
+.nav-bar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-bar ul li {
+    margin: 0 10px; /* Adjust spacing between items */
+}
+
+.nav-bar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px; /* Ensure enough clickable area */
+}
+
+/* Active link style */
+.nav-bar ul li a.active {
+    color: #000;
+    background-color: #fefe;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1320px) {
+    header {
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .Rhino {
+        display: block; /* Show the Rhino (hamburger icon) on smaller screens */
+    }
+
+    .nav-bar {
+        display: none; /* Hide the nav-bar by default on smaller screens */
+        width: 100vw;
+        background: #000;
+        position: absolute;
+        top: 60px; /* Adjust as needed */
+        left: 0;
+        right: 0;
+        transition: 0.2s;
+        overflow: hidden;
+    }
+
+    .nav-bar.active {
+        display: flex; /* Show the nav-bar when active */
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Adjust height based on content */
+    }
+
+    .nav-bar ul {
+        display: block;
+        width: 100%; /* Ensure the width is 100% */
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-bar ul li {
+        margin: 0; /* Remove margin for vertical stacking */
+    }
+
+    .nav-bar ul li a {
+        display: block; /* Ensure links fill their container */
+        margin-bottom: 12px; /* Adjust spacing between items */
+        text-align: center; /* Center text */
+        padding: 15px; /* Ensure touch targets are large enough */
+    }
+}
+
+/* Extra Media Query for Very Small Screens */
+@media only screen and (max-width: 800px) {
+    .item {
+        flex: 1 1 100%; /* Full width on very small screens */
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhino Rescue</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- This is to create the navigation bar -->
+    <header>
+        <div class="logo">KAH Rhino Rescue</div>
+        <div class="Rhino">&#9776;</div> <!-- This is the hamburger icon -->
+        
+        <nav class="nav-bar">
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <section>
+            <h1>Slogan</h1>
+            <h1>Full width photo and description underneath</h1>
+            <h1>Summary of main activities of organizations</h1>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <h2>&copy; Copyright Reserved. 2022</h2>
+        <p>Developers and Designers<br>Kamvelihle Dyantyi / Ambesiwe / Hawa</p>
+    </footer>
+
+    <script>
+        const rhinoIcon = document.querySelector(".Rhino");
+        const navBar = document.querySelector(".nav-bar");
+
+        rhinoIcon.addEventListener("click", function() {
+            navBar.classList.toggle("active"); // Toggles the active class
+        });
+    </script>
+</body>
+</html>
