@@ -54,21 +54,16 @@ nav a {
 nav a:hover {
     color: #666;
 }
-
-.hamburger-icon { /* Add styles for the hamburger icon */
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.hamburger-icon span {
-    background-color: #333;
-    display: block;
-    height: 2px;
-    margin: 5px 0;
-    width: 20px;
-}
+.image-container {
+    width: 100%; /* make the container take up the full width */
+    margin: 0 auto; /* center the container horizontally */
+  }
+  
+  .image-container img {
+    width: 100%; /* make the image take up the full width of the container */
+    height: auto; /* maintain the image's aspect ratio */
+    object-fit: fill; /* optional, but helps with image scaling */
+  }
 
 nav.active { /* Add styles for the active nav state */
     display: block;
