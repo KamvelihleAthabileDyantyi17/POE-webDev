@@ -4,46 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     <title>Rhino Rescue</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- This is to create the navigation bar -->
     <header>
-        <div class="logo">KAH Rhino Rescue</div>
-        <div class="Rhino">&#9776;</div> <!-- This is the hamburger icon -->
-        
-        <nav class="nav-bar">
+        <div class="logo">
+            <img src="images/KAH.jpg" alt="KAH Rhino Rescue Logo">
+            KAH Rhino Rescue
+        </div>
+        <nav class="active">
+            <ul>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="news.html">News</a></li>
             </ul>
         </nav>
     </header>
-
-    <!-- Main content area -->
+    
     <main>
-        <section>
-            <h1>Slogan</h1>
-            <h1>Full width photo and description underneath</h1>
-            <h1>Summary of main activities of organizations</h1>
-        </section>
+        <div class="image-container">
+            <img src="images/earth.jpg" alt="animals image">
+        </div>
     </main>
 
-    <!-- Footer section -->
     <footer>
-        <h2>&copy; Copyright Reserved. 2022</h2>
-        <p>Developers and Designers<br>Kamvelihle Dyantyi / Ambesiwe / Hawa</p>
+        <div class="footer-content">
+            <h2>&copy; Copyright Reserved. 2024</h2>
+            <p>Developers and Designers<br>Kamvelihle Dyantyi / Ambesiwe / Hawa</p>
+        </div>
     </footer>
 
-    <script>
-        const rhinoIcon = document.querySelector(".Rhino");
-        const navBar = document.querySelector(".nav-bar");
-
-        rhinoIcon.addEventListener("click", function() {
-            navBar.classList.toggle("active"); // Toggles the active class
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
+
 </html>

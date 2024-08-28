@@ -1,0 +1,190 @@
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	color: white;
+	background-color: #0b0b0b;
+	border-bottom: 1px solid #ccc;
+	position: absolute ;
+	top: 0;
+	width: 100%;
+	grid-row: 1;
+}
+body{
+	margin: 0%;
+}
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+	margin-right: 20px;
+}
+
+.logo img {
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+nav ul {
+    list-style: none;
+    background-color: hsl(0, 0%, 20%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row; /* Add this to stack the nav items vertically */
+}
+nav li {
+   flex: 1;
+   margin-right: 20px;
+}
+
+nav a {
+	text-decoration: none;
+	color: #333;
+	transition: color 0.2s ease;
+}
+
+nav a:hover {
+	color: #666;
+}
+
+.hamburger-icon {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+}
+
+.hamburger-icon span {
+	background-color: #333;
+	display: block;
+	height: 2px;
+	margin: 5px 0;/* take up remaining space */
+	width: 20px;/* add scrollbar if content overflows */
+}
+
+nav.active {
+	display: block;
+}
+
+nav:not(.active) {
+	display: none;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	padding: 10px;
+	grid-row: 2;
+	background-color:#4567b7;;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 2;
+	grid-template-rows: auto 2fr auto;
+	/* header, main content, footer */
+	grid-template-columns: 2fr;
+	/* single column */
+	height: 100vh;
+	/* take up full viewport height */
+	margin-top: 150px;
+	/* adjust the value to match your header height */
+
+	/* remove default margin */
+	padding: 0;
+	/* remove default padding */
+	width: 100%;
+	/* ensure the main element takes up the full width */
+}
+.donate-section {
+	background-color: #f7f7f7;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.donate-section h2 {
+	margin-top: 0;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+label {
+	margin-bottom: 10px;
+}
+
+input[type="number"] {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	width: 100%;
+}
+
+select {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	width: 100%;
+}
+
+button[type="submit"] {
+	background-color: #4CAF50;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button[type="submit"]:hover {
+	background-color: #3e8e41;
+}
+
+.impact-section {
+	background-color: #f7f7f7;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin-top: 20px;
+}
+
+.impact-section h2 {
+	margin-top: 0;
+}
+
+.impact-section ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.impact-section li {
+	margin-bottom: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	position: absolute;
+    padding: 20px;
+    color: white; /* changed font-color to color */
+    background-color: #0b0b0b;
+    border-bottom: 1px solid #ccc;
+    position: fixed; /* added this to make the footer stick to the bottom */
+    bottom: 0; /* added this to make the footer stick to the bottom */
+    width: 100%; /* added this to make the footer full width */
+	grid-row: 3;
+}

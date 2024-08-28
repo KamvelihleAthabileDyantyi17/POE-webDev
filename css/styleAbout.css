@@ -1,0 +1,114 @@
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    background-color: #0b0b0b;
+    border-bottom: 1px solid #ccc;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+body {
+    margin: 0%;
+}
+
+main {
+    flex: 1; /* Allows main content to grow and push footer to bottom */
+    display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	padding: 10px;
+	grid-row: 2;
+	background-color:#4567b7;;
+}
+
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+	margin-right: 20px;
+}
+
+.logo img {
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+nav ul {
+    list-style: none;
+    background-color: hsl(0, 0%, 20%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row; /* Remove overflow: hidden */
+}
+nav li {
+   flex: 1;
+   margin-right: 20px;
+}
+
+nav a {
+	text-decoration: none;
+	color: #333;
+	transition: color 0.2s ease;
+}
+
+nav a:hover {
+	color: #666;
+}
+
+.hamburger-icon {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+}
+
+.hamburger-icon span {
+	background-color: #333;
+	display: block;
+	height: 2px;
+	margin: 5px 0;/* take up remaining space */
+	width: 20px;/* add scrollbar if content overflows */
+}
+
+nav.active {
+	display: block;
+}
+
+nav:not(.active) {
+	display: none;
+}
+
+
+.logo {
+    font-size: 50px;
+    font-style: New Amsterdam;
+    color: white;
+    position: absolute;
+}
+
+.Rhino {
+    display: none; 
+    font-size: 30px;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white; /* changed font-color to color */
+    background-color: #0b0b0b;
+    border-bottom: 1px solid #ccc;
+    position: relative; /* added this to make the footer stick to the bottom */
+    bottom: 0; /* added this to make the footer stick to the bottom */
+    width: 100%; /* added this to make the footer full width */
+	grid-row: 3;
+}
