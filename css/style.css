@@ -55,16 +55,16 @@ nav a:hover {
     color: #666;
 }
 .image-container {
-    width: 100%; /* make the container take up the full width */
-    margin: 0 auto; /* center the container horizontally */
-  }
-  
-  .image-container img {
-    width: 100%; /* make the image take up the full width of the container */
-    height: auto; /* maintain the image's aspect ratio */
-    object-fit: fill; /* optional, but helps with image scaling */
-  }
+    width: 100%;
+    height: 100vh; /* 100vh means 100% of the viewport height */
+    overflow: hidden;
+}
 
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This property ensures the image covers the entire container */
+}
 nav.active { /* Add styles for the active nav state */
     display: block;
 }
@@ -83,4 +83,7 @@ footer {
     position: fixed; /* added this to make the footer stick to the bottom */
     bottom: 0; /* added this to make the footer stick to the bottom */
     width: 100%; /* added this to make the footer full width */
+  }
+  @media screen and (max-width: 960px) {
+    /* Styles to apply when screen width is less than 960px */
   }

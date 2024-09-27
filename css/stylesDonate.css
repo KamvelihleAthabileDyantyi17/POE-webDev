@@ -41,30 +41,20 @@ nav li {
    margin-right: 20px;
 }
 
-nav a {
+nav a {/*This is every important*/
 	text-decoration: none;
-	color: #333;
+	color: white;
+	padding: 15px;
+	display: block;
+	text-align: center;
 	transition: color 0.2s ease;
+
 }
 
 nav a:hover {
 	color: #666;
 }
 
-.hamburger-icon {
-	background-color: transparent;
-	border: none;
-	cursor: pointer;
-	padding: 10px;
-}
-
-.hamburger-icon span {
-	background-color: #333;
-	display: block;
-	height: 2px;
-	margin: 5px 0;/* take up remaining space */
-	width: 20px;/* add scrollbar if content overflows */
-}
 
 nav.active {
 	display: block;
@@ -80,7 +70,7 @@ main {
 	flex-grow: 1;
 	padding: 10px;
 	grid-row: 2;
-	background-color:#4567b7;;
+
 }
 
 body {
@@ -93,7 +83,7 @@ body {
 	/* single column */
 	height: 100vh;
 	/* take up full viewport height */
-	margin-top: 150px;
+	margin-top: 90px;
 	/* adjust the value to match your header height */
 
 	/* remove default margin */
@@ -188,3 +178,6 @@ footer {
     width: 100%; /* added this to make the footer full width */
 	grid-row: 3;
 }
+@media screen and (max-width: 960px) {
+	/* Styles to apply when screen width is less than 960px */
+  }
