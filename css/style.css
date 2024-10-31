@@ -12,7 +12,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-  }
+}
 main{
     margin-top: 60px;
 }
@@ -83,4 +83,4 @@ footer {
     position: fixed; /* added this to make the footer stick to the bottom */
     bottom: 0; /* added this to make the footer stick to the bottom */
     width: 100%; /* added this to make the footer full width */
-  }
+}
