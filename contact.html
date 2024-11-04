@@ -5,20 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
-    <title>Conatct Us</title>
-<link rel="stylesheet" href="css/styleContact.css">
+    <link rel="stylesheet" href="css/styleContact.css">
     <title>Conatct Us</title>
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <img src="images/KAH.jpg" alt="KAH Rhino Rescue Logo">
-            KAH Rhino
+            <img src="images/KAH.jpg" alt="KAH Rhino Rescue Logo"> KAH Rhino
         </div>
-        <nav class="active">
+        <nav>
             <ul>
-
                 <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -26,43 +23,38 @@
                 <li><a href="news.html">News</a></li>
             </ul>
         </nav>
-    </header>
-
-
-
-    <h1>KAH ANIMAL RESCUE</h1><br>
-    <h2><em>Let's stand together against animal cruelty🫡</em></h2>
-    <h1>Contact Us</h1>
-    <p>If you see an animal that is abused, homeless or sick, please submit the form below. When completed, a Customer
-        Representative will contact you within 48 hours.</p>
-
-    <form>
-        <h2>Drop us a line</h2>
-        <label for="name">Full Name:</label>
-        <input type="text" id="name"><br><br>
-
-        <label for="email">Your email</label>
-        <input type="email" id="email"><br><br>
-
-        <label for="phone">Your Phone Number </label>
-        <input type="tel" id="phone"><br><br>
-
-        <label for="message">Your Message</label>
-        <input type="message" required><br><br>
-
-        <button>Send</button>
-        <br><br>
-
-    </form>
+    </header> <br><br>
+    
+    <main>
+        <h1>KAH ANIMAL RESCUE</h1>
+        <h2><em>Let's stand together against animal cruelty 🫡</em></h2>
+        <h1>Contact Us</h1>
+        <p>If you see an animal that is abused, homeless, or sick, please submit the form below. When completed, a Customer
+            Representative will contact you within 48 hours.</p>
+    
+        <form id="contactForm" onsubmit="return validateForm()">
+            <h2>Drop us a line</h2>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="phone">Your Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+    
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea>
+    
+            <button type="submit">Send</button>
+        </form>
+    </main>
+    
     <footer>
-        <div class="footer-content">
-            <h2>&copy; Copyright Reserved. 2024</h2>
-            <p>Developers and Designers<br>Kamvelihle Dyantyi / Ambesiwe / Hawa</p>
-        </div>
+        <p>&copy; Copyright Reserved. 2024 | Kamvelihle Dyantyi / Ambesiwe / Hawa</p>
     </footer>
 
-
-
+    <script src="javascript/contact.js"></script>
 </body>
 
 </html>
