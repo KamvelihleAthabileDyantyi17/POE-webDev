@@ -5,9 +5,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
-    <title></title>
+    <title>KAH Rhino Rescue</title>
     <link rel="stylesheet" href="css/styleNews.css">
+    <style>
+        /* Scroll-to-Top Button */
+        #scrollBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
+        #scrollBtn:hover {
+            background-color: #333;
+        }
+
+        /* Collapsible sections */
+        h1.section-title {
+            cursor: pointer;
+        }
+
+        /* Waving flag animation */
+        .flag {
+            width: 300px;
+            height: 150px;
+            display: inline-block;
+            animation: wave 2s infinite;
+            transform-origin: 0% 50%;
+        }
+
+        @keyframes wave {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(2deg); }
+            50% { transform: rotate(0deg); }
+            75% { transform: rotate(-2deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        /* Carousel slide-in animation */
+        .carousel-item {
+            display: none;
+            text-align: center;
+            opacity: 0;
+            animation: slide-in 1s forwards;
+        }
+
+        .carousel-item.active {
+            display: block;
+        }
+
+        @keyframes slide-in {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -18,7 +83,7 @@
         </div>
         <nav class="active">
             <ul>
-                <li><a href="home.html">Home</a></li>
+                <li><a href="home.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="donate.html">Donate</a></li>
@@ -28,66 +93,67 @@
     </header>
 
     <main>
-        <p>
-            Wild animal suffering is the suffering experienced by non-human animals living outside of direct human
-            control due to harms, such as disease, injury, parasitism, starvation, and malnutrition, dehydration,
-            weather conditions, natural disasters, and killings by other animals, as well as psychological stress.
-            Some estimates show that these individual animals make up most animals in existence. An extensive amount of
-            natural suffering has been described as an unavoidable consequence of Darwin Evolution as well as the
-            pervasiveness of reproductive strategies which favour producing large numbers of offspring, with a low
-            amount of parental care and of which only a small number survive to adulthood, the rest dying in painful
-            ways, has led some to argue that suffering dominates happiness in nature.
-        </p>
-        <h1>A Global Overview of Recent Animal Cruelty News</h1>
-        <h1>South Africa:</h1>
-        <img src="images/SA.jpg" alt="SA FLAG image" width="300" height="150">
-        <h2>Cattle on 'Kuwaiti Death Ship': In 2023, the NSPCA exposed a harrowing case of animal cruelty involving
-            thousands of cattle transported on a ship from Kuwait to South Africa. The animals were subjected to inhumane
-            conditions, including overcrowding, lack of food and water, and extreme heat. Many of the cattle succumbed to
-            the ordeal, while survivors were rescued and rehabilitated. This incident sparked widespread outrage and calls
-            for stricter regulations governing animal transportation.
-            Monkey Lab Closure: Following years of public pressure and investigations, a controversial monkey research
-            laboratory in South Africa was ordered to close. Animal rights activists had long condemned the facility for its
-            alleged mistreatment of animals, including primates used for medical research. The closure marked a significant
-            victory for those advocating for the ethical treatment of animals in scientific research.</h2>
-        <h1>Brazil:</h1>
-        <img src="images/brazil.jpg" alt="BRSL FLAG image" width="300" height="150">
-        <h2>Dog Fighting Ring Bust: Brazilian authorities have been cracking down on dog fighting rings, which are illegal
-        and cruel practices. Recent raids have led to the rescue of numerous dogs, many of whom were severely injured or
-        traumatized. The perpetrators of these crimes have faced legal consequences, including fines and imprisonment.
-        The government has also implemented stricter laws and regulations to prevent dog fighting and promote animal
-        welfare.</h2>
-        <h1>United States:</h1>
-        <img src="images/usa.jpg" alt="USA FLAG image"width="300" height="150">
-        <h2> Puppy Mill Investigations: The United States continues to face challenges related to puppy mills, where dogs are
-        bred in inhumane conditions for profit. Law enforcement agencies and animal welfare organizations have been
-        conducting investigations and rescuing animals from these facilities. While there have been some successes in
-        shutting down puppy mills and improving conditions for animals, the problem remains widespread.
-        Wildlife Trafficking Crackdown: The U.S. government has stepped up its efforts to combat wildlife trafficking,
-        which is a lucrative but illegal trade that endangers numerous species. Authorities have seized shipments of
-        illegal wildlife products, such as ivory, rhino horns, and exotic animal parts. These crackdowns have helped to
-        reduce the demand for these products and protect vulnerable species.</h2>
-        <h1>China:</h1>
-        <img src="images/china.jpg" alt="CHINA FLAG image"width="300" height="150">
-        <h2>Wild Animal Trade Concerns: China has been grappling with concerns over the illegal trade in wild animals, which
-        can lead to cruelty, endangerment, and the spread of diseases. Authorities have implemented stricter regulations
-        and enforcement measures to combat this issue, including bans on the trade in certain species and increased
-        penalties for violators. However, the illegal wildlife trade remains a significant challenge in China.
-        Pet Welfare Improvements: In recent years, there has been a growing awareness of animal welfare issues in China,
-        leading to improvements in the treatment of pets. More people are adopting pets from shelters and animal welfare
-        organizations, and there has been an increase in the number of veterinary clinics and pet care services
-        available. While there is still room for improvement, these developments are positive signs for animal welfare
-        in China.</h2>
-        <h1><b>Note: These are just a few examples of recent animal cruelty incidents. Unfortunately, such cases occur
-                worldwide, and it's essential to remain vigilant and support organizations working to protect
-                animals.</b></h1>
+        <div class="carousel">
+            <div class="carousel-item active">
+                <img src="images/SA.jpg" alt="South Africa" class="flag">
+                <h2>South Africa News</h2>
+                <p>Cattle on 'Kuwaiti Death Ship'...</p>
+            </div>
+            <div class="carousel-item">
+                <img src="images/brazil.jpg" alt="Brazil" class="flag">
+                <h2>Brazil News</h2>
+                <p>Dog Fighting Ring Bust...</p>
+            </div>
+            <!-- Add more items as needed -->
+        </div>
+
+        <h1 class="section-title" onclick="toggleSection('saNews')">South Africa</h1>
+        <div id="saNews">
+            <img src="images/SA.jpg" alt="SA FLAG image" class="flag">
+            <h2>Cattle on 'Kuwaiti Death Ship'</h2>
+            <p>In 2023, the NSPCA exposed a harrowing case of animal cruelty involving thousands of cattle transported on a ship from Kuwait to South Africa. The animals faced overcrowding, lack of food and water, and extreme heat. Many succumbed to these conditions, while survivors were rehabilitated. This incident sparked outrage and calls for stricter animal transportation regulations.</p>
+            <h2>Monkey Lab Closure</h2>
+            <p>After years of public pressure, a controversial monkey research lab in South Africa was closed. Animal rights activists condemned it for alleged mistreatment of animals used in research. The closure was a significant victory for those advocating for ethical treatment in scientific research.</p>
+        </div>
+
+        <h1 class="section-title" onclick="toggleSection('brazilNews')">Brazil</h1>
+        <div id="brazilNews">
+            <img src="images/brazil.jpg" alt="BRSL FLAG image" class="flag">
+            <h2>Dog Fighting Ring Bust</h2>
+            <p>Brazilian authorities have been actively cracking down on illegal dog fighting rings. Recent raids led to the rescue of numerous dogs, many of whom were severely injured. Perpetrators faced legal action, and the government has implemented stricter laws to prevent such cruelty.</p>
+            <h2>Wildlife Trafficking Measures</h2>
+            <p>The Brazilian government has increased efforts to tackle wildlife trafficking, rescuing countless animals from illegal trade. These actions help protect Brazil's rich biodiversity, as stricter penalties are imposed on those involved in wildlife trafficking.</p>
+        </div>
+
+        <h1 class="section-title" onclick="toggleSection('usaNews')">United States</h1>
+        <div id="usaNews">
+            <img src="images/usa.jpg" alt="USA FLAG image" class="flag">
+            <h2>Puppy Mill Investigations</h2>
+            <p>Authorities continue to investigate puppy mills across the U.S., where dogs are bred in poor conditions. Efforts to shut down these mills have led to the rescue of numerous animals. While there has been some success, puppy mills remain a persistent problem.</p>
+            <h2>Wildlife Trafficking Crackdown</h2>
+            <p>The U.S. government has intensified actions against wildlife trafficking, seizing shipments of illegal products like ivory and rhino horns. These efforts aim to reduce demand and protect endangered species from exploitation.</p>
+        </div>
+
+        <h1 class="section-title" onclick="toggleSection('chinaNews')">China</h1>
+        <div id="chinaNews">
+            <img src="images/china.jpg" alt="CHINA FLAG image" class="flag">
+            <h2>Wild Animal Trade Concerns</h2>
+            <p>China faces ongoing issues with illegal wildlife trade, impacting both animal welfare and public health. The government has implemented stricter regulations, banning the trade of certain species, but the challenge persists.</p>
+            <h2>Pet Welfare Improvements</h2>
+            <p>In recent years, animal welfare awareness has grown in China, leading to better treatment for pets. More shelters and veterinary services are emerging, and an increasing number of citizens are adopting pets from shelters, marking positive changes in the pet care landscape.</p>
+        </div>
+
+        <h1><b>Note: These are just a few examples of recent animal cruelty incidents. Stay vigilant and support animal protection organizations.</b></h1>
     </main>
+
     <footer>
         <div class="footer-content">
-            <h2>&copy; Copyright Reserved. 2024</h2>
+            <h2>&copy; <span id="current-year"></span> Copyright Reserved.</h2>
             <p>Developers and Designers<br>Kamvelihle Dyantyi / Ambesiwe / Hawa</p>
         </div>
     </footer>
-</body>
+
+    <script src="js/news.js"></script>
+
 
 </html>
